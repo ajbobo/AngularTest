@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AngularTestingApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Testing</title>
+
+    <script src="angular.min.js"></script>
+    <script src="AngularTesting.js"></script>
+    <link rel="stylesheet" href="AngularTesting.css"/>
+</head>
+
+<body ng-controller="AngularTestingCtrl">
+<h1>Welcome to a Page</h1>
+
+<!-- Simple data bindings -->
+<p>This is a bound value from the controller: {{value}}</p>
+<p>Here's another bound value: <span class="coloredText">{{numCount}}</span></p>
+
+<hr/>
+<!-- Binding + repeater -->
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr ng-repeat="kid in kids">
+        <td>{{kid.name}}</td>
+        <td>{{kid.age}}</td>
+    </tr>
+</table>
+
+<hr/>
+<!-- A simple form with validation, Repeaters that are based on bound values -->
+<form name="myForm">
+    <label>Number:<input type="number" name="numVal" min="0" max="15" ng-model="numCount" required
+                         ng-change="updateTable()"/></label>
+    <div class="coloredText">
+        <span ng-show="myForm.numVal.$error.number">Not valid number!</span>
+        <span ng-show="myForm.numVal.$error.required">Required!</span>
+        <span ng-show="myForm.numVal.$error.min">Too small! (must be >=0)</span>
+        <span ng-show="myForm.numVal.$error.max">Too large! (must be <=15)</span>
+    </div>
+</form>
+<table>
+    <tr>
+        <th/>
+        <th ng-repeat="x in numList"><b>{{x}}</b></th>
+    </tr>
+    <tr ng-repeat="x in numList">
+        <td><b>{{x}}</b></td>
+        <td ng-repeat="y in numList">
+            <p>{{x * y}}</p>
+        </td>
+    </tr>
+</table>
+
+<hr/>
+
+</body>
+
+</html>
