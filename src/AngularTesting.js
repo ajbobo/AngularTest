@@ -1,4 +1,4 @@
-var AngularTestingApp = angular.module('AngularTestingApp', []);
+var AngularTestingApp = angular.module('AngularTestingApp', []); // The [] indicates that a new module is being created
 
 AngularTestingApp.controller('AngularTestingCtrl', function AngularTestingCtrl($scope) {
 
@@ -14,15 +14,5 @@ AngularTestingApp.controller('AngularTestingCtrl', function AngularTestingCtrl($
 
     $scope.numCount = 5;
     $scope.updateTable();
-
-    var kidsValues = ["A.J.", 39, "Will", 38, "Erin", 36, "Emily", 35, "Richard", 33, "Phil", 32];
-    $scope.kids = [];
-    for (var x = 0; x < kidsValues.length; x += 2) {
-        var kid = {
-            "name": kidsValues[x],
-            "age": kidsValues[x + 1]
-        };
-        $scope.kids.push(kid);
-    }
 
 });

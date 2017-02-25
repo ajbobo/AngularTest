@@ -6,6 +6,9 @@
 
     <script src="angular.min.js"></script>
     <script src="AngularTesting.js"></script>
+    <script src="kid-table.component.js"></script>
+    <script src="show-text.component.js"></script>
+
     <link rel="stylesheet" href="AngularTesting.css"/>
 </head>
 
@@ -16,21 +19,20 @@
 <p>This is a bound value from the controller: {{value}}</p>
 <p>Here's another bound value: <span class="coloredText">{{numCount}}</span></p>
 
+<!-- Simple component example -->
 <hr/>
-<!-- Binding + repeater -->
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Age</th>
-    </tr>
-    <tr ng-repeat="kid in kids">
-        <td>{{kid.name}}</td>
-        <td>{{kid.age}}</td>
-    </tr>
-</table>
+<show-text input-text="Hello There"></show-text>
+<show-text input-text="Another One"></show-text>
+<show-text input-text="Number 3"></show-text>
 
+<!-- Binding + repeater in a component-->
 <hr/>
+<kid-table></kid-table>
+<kid-table count="2"></kid-table>
+<kid-table count="4"></kid-table>
+
 <!-- A simple form with validation, Repeaters that are based on bound values -->
+<hr style="clear:left"/>
 <form name="myForm">
     <label>Number:<input type="number" name="numVal" min="0" max="15" ng-model="numCount" required
                          ng-change="updateTable()"/></label>

@@ -12,3 +12,8 @@ td {
     color: red;
     font-weight: bold;
 }
+
+kid-table {
+    float: left;
+    margin-right: 25px;
+}
