@@ -1,20 +1,4 @@
-table, th, td {
-    border: 1px solid black;
-}
-
-td {
-    width: 50px;
-    padding: 5px;
-    text-align: center;
-}
-
 .coloredText {
     color: red;
     font-weight: bold;
-}
-
-kid-table {
-    float: left;
-    margin-right: 25px;
-    margin-bottom: 25px;
 }

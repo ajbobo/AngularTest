@@ -1,0 +1,29 @@
+<style>
+    /*Most of this styling was taken from http://stackoverflow.com/questions/15994654/how-can-i-layout-text-and-inputs-on-a-form-to-fit-a-specific-width-justified*/
+    form {
+        width: 100%;
+        text-align: left;
+    }
+
+    input {
+        display: inline-block;
+    }
+
+    form:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+    }
+</style>
+
+<div style="background: lightpink; border-style: dashed">
+    <form name="myForm">
+        <label>Number:<input type="number" name="numVal" min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}"
+                             ng-model="$ctrl.numValue" required/></label>
+        <span ng-show="myForm.numVal.$error.number">Not valid number!</span>
+        <span ng-show="myForm.numVal.$error.required">Required!</span>
+        <span ng-show="myForm.numVal.$error.min">Too small! (must be >={{$ctrl.minValue}})</span>
+        <span ng-show="myForm.numVal.$error.max">Too large! (must be <={{$ctrl.maxValue}})</span>
+    </form>
+    <p style="margin-top:0px">Number you entered <b>{{$ctrl.numValue}}</b></p>
+</div>

@@ -8,6 +8,7 @@
     <script src="AngularTesting.js"></script>
     <script src="kid-table.component.js"></script>
     <script src="show-text.component.js"></script>
+    <script src="number-imput.component.js"></script>
 
     <link rel="stylesheet" href="AngularTesting.css"/>
 </head>
@@ -33,16 +34,9 @@
 
 <!-- A simple form with validation, Repeaters that are based on bound values -->
 <hr style="clear:left"/>
-<form name="myForm">
-    <label>Number:<input type="number" name="numVal" min="0" max="15" ng-model="numCount" required
-                         ng-change="updateTable()"/></label>
-    <div class="coloredText">
-        <span ng-show="myForm.numVal.$error.number">Not valid number!</span>
-        <span ng-show="myForm.numVal.$error.required">Required!</span>
-        <span ng-show="myForm.numVal.$error.min">Too small! (must be >=0)</span>
-        <span ng-show="myForm.numVal.$error.max">Too large! (must be <=15)</span>
-    </div>
-</form>
+<number-input min-value="0" max-value="15"></number-input>
+<number-input min-value="15" max-value="30"></number-input>
+<number-input min-value="10" max-value="10045"></number-input>
 <table>
     <tr>
         <th/>
