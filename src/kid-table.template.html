@@ -1,22 +1,26 @@
 <style>
-    table, th, td {
-        border: 1px solid black;
-    }
-
-    td {
-        width: 50px;
-        padding: 5px;
-        text-align: center;
-    }
-
     kid-table {
+        border: 1px dashed black;
+        background: lightgreen;
         float: left;
         margin-right: 25px;
         margin-bottom: 25px;
     }
+
+    kid-table table th,
+    kid-table table td {
+        border: 1px solid black;
+    }
+
+    kid-table td {
+        width: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+    }
 </style>
 
-<table bgcolor="#7fffd4" border="dashed">
+<table>
     <tr>
         <th>Name</th>
         <th>Age</th>

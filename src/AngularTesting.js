@@ -2,25 +2,11 @@ var AngularTestingApp = angular.module('AngularTestingApp', []); // The [] indic
 
 AngularTestingApp.controller('AngularTestingCtrl', function AngularTestingCtrl($scope) {
 
-    // this.updateTable = function () {
-    //     this.numList = [];
-    //     for (x = 0; x <= this.numCount; x++)
-    //         this.numList.push(x);
-    // };
-    //
-    // this.$onInit = function() {
-    //     this.updateTable()
-    // };
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     $scope.value = "SomeValue";
-
     $scope.numCount = 5;
-    // $scope.updateTable();
 
-    $scope.setInputValue = function(number) {
-        $scope.inputValue = number;
+    $scope.setValFromUser = function(number) {
+        $scope.valFromUser = number;
     }
 
 });
