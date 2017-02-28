@@ -5,8 +5,4 @@ AngularTestingApp.controller('AngularTestingCtrl', function AngularTestingCtrl($
     $scope.value = "SomeValue";
     $scope.numCount = 5;
 
-    $scope.setValFromUser = function(number) {
-        $scope.valFromUser = number;
-    }
-
 });
