@@ -19,7 +19,7 @@
 <div style="background: lightpink; border-style: dashed">
     <form name="myForm">
         <label>Number:<input type="number" name="numVal" min="{{$ctrl.minValue}}" max="{{$ctrl.maxValue}}"
-                             ng-model="$ctrl.numValue" required/></label>
+                             ng-model="$ctrl.numValue" ng-change="$ctrl.onSetValue({outNum: $ctrl.numValue})"  required/></label>
         <span ng-show="myForm.numVal.$error.number">Not valid number!</span>
         <span ng-show="myForm.numVal.$error.required">Required!</span>
         <span ng-show="myForm.numVal.$error.min">Too small! (must be >={{$ctrl.minValue}})</span>

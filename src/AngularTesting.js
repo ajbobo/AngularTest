@@ -19,4 +19,8 @@ AngularTestingApp.controller('AngularTestingCtrl', function AngularTestingCtrl($
     $scope.numCount = 5;
     // $scope.updateTable();
 
+    $scope.setInputValue = function(number) {
+        $scope.inputValue = number;
+    }
+
 });
