@@ -31,11 +31,12 @@
 <show-text input-text="Another One"></show-text>
 <show-text input-text="Number 3"></show-text>
 
-<!-- Binding + repeater in a component-->
+<!-- Binding,repeater (with/without a filter) in a component -->
 <hr/>
-<kid-table></kid-table>
-<kid-table count="2"></kid-table>
-<kid-table count="4"></kid-table>
+<p>Search: <input ng-model="kidQuery"/></p>
+<kid-table style="float:left" query="{{kidQuery}}"></kid-table>
+<kid-table count="2" style="float:left"></kid-table>
+<kid-table count="6" style="float:left" query="{{kidQuery}}"></kid-table>
 
 <!-- A simple form with validation, Repeaters that are based on bound values -->
 <hr style="clear:left"/>
