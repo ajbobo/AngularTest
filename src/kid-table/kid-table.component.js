@@ -1,7 +1,7 @@
-var AngularTestingApp = angular.module('AngularTestingApp'); // Using only the module name means we are looking for a module that already exists
-
-AngularTestingApp.component("kidTable", {
-    templateUrl: "kid-table.template.html", // Or the HTML can be in the "template" field
+angular
+    .module('kid-table')
+    .component("kidTable", {
+    templateUrl: "kid-table/kid-table.template.html", // Or the HTML can be in the "template" field
 
     controller: function () {
         this.$onInit = function () { // I needed $onInit because this.count didn't seem to be available when the controller function is first called

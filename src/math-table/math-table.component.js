@@ -1,7 +1,7 @@
-var AngularTestingApp = angular.module("AngularTestingApp");
-
-AngularTestingApp.component("mathTable", {
-    templateUrl: 'math-table.template.html',
+angular
+    .module("math-table")
+    .component("mathTable", {
+    templateUrl: "math-table/math-table.template.html",
     controller: function () {
         this.updateTable = function () {
             this.numList = [];
