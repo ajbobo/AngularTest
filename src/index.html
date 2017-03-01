@@ -29,7 +29,7 @@
 <hr/>
 <show-text input-text="Hello There"></show-text>
 <show-text input-text="Another One"></show-text>
-<show-text input-text="Number 3"></show-text>
+<show-text display-text="Third example:" input-text="Number 3"></show-text>
 
 <!-- Binding,repeater (with/without a filter and ordering) in a component -->
 <hr/>
@@ -50,7 +50,8 @@
 <number-input min-value="10" max-value="1045"></number-input>
 <number-input min-value="0" max-value="15" on-set-value="valFromUser = outNum"></number-input>
 <p>Value from NumberInput: <span class="coloredText">{{valFromUser}}</span></p>
-<p>Value * 2: <span class="coloredText">{{valFromUser * 2}}</span></p>
+<!--<p>Value * 2: <span class="coloredText">{{valFromUser * 2}}</span></p>-->
+<show-text display-text="Value * 2:" input-text="{{valFromUser * 2}}"></show-text>
 
 <!-- Tables built from components -->
 <hr/>
