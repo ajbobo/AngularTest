@@ -5,5 +5,6 @@ angular
         $scope.kidQuery = "";
         $scope.value = "SomeValue";
         $scope.numCount = 5;
+        $scope.sortOrder = "name";
 
     });

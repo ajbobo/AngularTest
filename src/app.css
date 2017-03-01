@@ -2,3 +2,13 @@
     color: red;
     font-weight: bold;
 }
+
+.inlineForm {
+    border: 1px dashed;
+    text-align: left;
+    background: lightgoldenrodyellow;
+}
+
+.inlineForm p {
+     display:inline-block;
+ }

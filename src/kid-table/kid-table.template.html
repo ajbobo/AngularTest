@@ -24,7 +24,7 @@
         <th>Name</th>
         <th>Age</th>
     </tr>
-    <tr ng-repeat='kid in $ctrl.kids | filter:$ctrl.query'>
+    <tr ng-repeat='kid in $ctrl.kids | filter:$ctrl.query | orderBy:$ctrl.orderBy'>
         <td>{{kid.name}}</td>
         <td>{{kid.age}}</td>
     </tr>

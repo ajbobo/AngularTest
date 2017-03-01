@@ -32,7 +32,8 @@ angular
 
         bindings: {
             count: '@',
-            query: '@'
+            query: '@',
+            orderBy: '@'
         }
     });
 

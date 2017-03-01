@@ -31,10 +31,16 @@
 <show-text input-text="Another One"></show-text>
 <show-text input-text="Number 3"></show-text>
 
-<!-- Binding,repeater (with/without a filter) in a component -->
+<!-- Binding,repeater (with/without a filter and ordering) in a component -->
 <hr/>
-<p>Search: <input ng-model="kidQuery"/></p>
-<kid-table style="float:left" query="{{kidQuery}}"></kid-table>
+<div class="inlineForm">
+    <p>Search: <input ng-model="kidQuery"/></p>
+    <p>Sort by: <select ng-model="sortOrder">
+        <option value="name">Name</option>
+        <option value="age">Age</option>
+    </select></p>
+</div>
+<kid-table style="float:left;" query="{{kidQuery}}" order-by="{{sortOrder}}"></kid-table>
 <kid-table count="2" style="float:left"></kid-table>
 <kid-table count="6" style="float:left" query="{{kidQuery}}"></kid-table>
 
